@@ -77,7 +77,7 @@ The ERD visually represents the relationships between tables in the database.
 ## 🔥 **Let’s Dive In**  
 
 Want to explore the full project?  
-📂 [Check out the repository](https://github.com/Ritam333/ZOMATO_DATA_ANALYSIS_SQL) and start the action!  
+📂 [Check out the repository](https://github.com/Ritam333/E_COMMERCE_ANALYSIS_SQL) and start the action!  
 
 ---  
 
