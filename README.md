@@ -33,13 +33,22 @@ The ERD visually represents the relationships between tables in the database.
 
 ## 🚀 Project Highlights
 
-- Identified **top-selling products** based on total sales value.  
-- Analyzed **revenue by product category** and their contributions.  
-- Computed **average order value (AOV)** for key customers.  
-- Explored **monthly sales trends** to identify seasonal patterns.  
-- Found **least-selling product categories** for optimization.  
-- Ranked customers based on their **lifetime value (CLTV)**.  
-- Queried **low stock alerts** to improve inventory management. 
+- **Top Selling Products**: Identify the top-selling products by total sales value.
+- **Revenue by Category**: Calculate the revenue for each product category and its contribution to total sales.
+- **Average Order Value**: Compute the average order value for customers who placed more than 5 orders.
+- **Monthly Sales Trend**: Track the sales trend month by month for the past year.
+- **Customers with No Purchases**: Find customers who have registered but never placed an order.
+- **Least Selling Category by State**: Identify the least selling product category in each state.
+- **Customer Lifetime Value**: Rank customers based on their lifetime value to the business.
+- **Inventory Stock Alerts**: Get products with stock levels below a certain threshold.
+- **Shipping Delays**: Identify orders where the shipping date was more than 3 days after the order date.
+- **Payment Success Rates**: Calculate the percentage of successful payments across all orders.
+- **Top Performing Sellers**: Identify the top-performing sellers based on sales value.
+- **Product Profit Margin**: Calculate and rank products by their profit margin.
+- **Most Returned Products**: Identify products with the highest return rate.
+- **Inactive Sellers**: Identify sellers who haven't made any sales in the last 6 months.
+- **Store Procedure for Sale**: A stored procedure that updates inventory stock after a sale.
+
 
 
 
