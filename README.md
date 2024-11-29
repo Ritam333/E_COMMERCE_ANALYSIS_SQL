@@ -52,6 +52,14 @@ The ERD visually represents the relationships between tables in the database.
 
 
 
+--
+
+## 📚 Learning Outcomes  
+
+- Mastered **SQL essentials**: joins, aggregations, and subqueries.  
+- Gained insights into  **sales trends**.  
+- Enhanced **inventory and revenue management** through dynamic queries.  
+- Strengthened skills in **data-driven decision-making** for business optimization.  
 
 
 
