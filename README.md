@@ -10,7 +10,7 @@ It covers various reports such as top-selling products, revenue analysis, custom
 
 ### 1️⃣ **Database Setup**  
 -  Created the `AMAZON_db` database.  
--  Designed and structured the necessary tables to reflect Zomato's operations.  
+-  Designed and structured the necessary tables to reflect business operations.  
 
 ### 2️⃣ **Data Import**  
 -  Inserted comprehensive sample data into the tables for realistic analysis.  
