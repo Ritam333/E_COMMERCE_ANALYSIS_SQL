@@ -83,3 +83,151 @@ Want to explore the full project?
 
 **Before performing analysis, I ensured that the data was clean and free from null values where necessary. For instance:**
 
+## Database Tables
+
+### 1. Category Table  
+This table stores information about product categories.
+
+| **Column Name**   | **Data Type** | **Description**                              |
+|--------------------|---------------|----------------------------------------------|
+| `category_id`      | `INT` (Primary Key) | Unique identifier for the product category.   |
+| `category_name`    | `VARCHAR(20)` | Name of the product category.                 |
+
+---
+
+### 2. Customers Table  
+This table stores information about customers.
+
+| **Column Name**   | **Data Type** | **Description**                          |
+|--------------------|---------------|------------------------------------------|
+| `customer_id`      | `INT` (Primary Key) | Unique identifier for the customer.      |
+| `first_name`       | `VARCHAR(20)` | Customer's first name.                   |
+| `last_name`        | `VARCHAR(20)` | Customer's last name.                    |
+| `state`            | `VARCHAR(20)` | State where the customer resides.         |
+
+---
+
+### 3. Sellers Table  
+This table contains information about sellers.
+
+| **Column Name**   | **Data Type** | **Description**                          |
+|--------------------|---------------|------------------------------------------|
+| `seller_id`        | `INT` (Primary Key) | Unique identifier for the seller.       |
+| `seller_name`      | `VARCHAR(25)` | Name of the seller.                      |
+| `origin`           | `VARCHAR(10)` | Seller's origin location.                |
+
+---
+
+### 4. Products Table  
+This table stores details about the products available for sale.
+
+| **Column Name**   | **Data Type** | **Description**                                  |
+|--------------------|---------------|--------------------------------------------------|
+| `product_id`       | `INT` (Primary Key) | Unique identifier for the product.               |
+| `product_name`     | `VARCHAR(50)` | Name of the product.                              |
+| `price`            | `FLOAT`       | Selling price of the product.                    |
+| `cogs`             | `FLOAT`       | Cost of goods sold for the product.              |
+| `category_id`      | `INT` (Foreign Key: `category.category_id`) | Reference to the product's category. |
+
+---
+
+### 5. Orders Table  
+This table stores information about orders placed by customers.
+
+| **Column Name**   | **Data Type** | **Description**                                      |
+|--------------------|---------------|------------------------------------------------------|
+| `order_id`         | `INT` (Primary Key) | Unique identifier for the order.                     |
+| `order_date`       | `DATE`        | Date the order was placed.                           |
+| `customer_id`      | `INT` (Foreign Key: `customers.customer_id`) | Reference to the customer placing the order.         |
+| `seller_id`        | `INT` (Foreign Key: `sellers.seller_id`) | Reference to the seller fulfilling the order.         |
+| `order_status`     | `VARCHAR(15)` | Current status of the order (e.g., pending, completed). |
+
+---
+
+### 6. Order Items Table  
+This table represents the individual items in an order.
+
+| **Column Name**   | **Data Type** | **Description**                                   |
+|--------------------|---------------|---------------------------------------------------|
+| `order_item_id`    | `INT` (Primary Key) | Unique identifier for the order item.             |
+| `order_id`         | `INT` (Foreign Key: `orders.order_id`) | Reference to the associated order.                |
+| `product_id`       | `INT` (Foreign Key: `products.product_id`) | Reference to the product in the order.           |
+| `quantity`         | `INT`        | Quantity of the product in the order.             |
+| `price_per_unit`   | `FLOAT`      | Price per unit of the product.                    |
+
+---
+
+### 7. Payments Table  
+This table tracks payment details for orders.
+
+| **Column Name**   | **Data Type** | **Description**                                   |
+|--------------------|---------------|---------------------------------------------------|
+| `payment_id`       | `INT` (Primary Key) | Unique identifier for the payment.               |
+| `order_id`         | `INT` (Foreign Key: `orders.order_id`) | Reference to the associated order.                |
+| `payment_date`     | `DATE`        | Date the payment was made.                        |
+| `payment_status`   | `VARCHAR(20)` | Status of the payment (e.g., completed, pending). |
+
+---
+
+### 8. Shippings Table  
+This table captures information about the shipping of orders.
+
+| **Column Name**   | **Data Type** | **Description**                                   |
+|--------------------|---------------|---------------------------------------------------|
+| `shipping_id`      | `INT` (Primary Key) | Unique identifier for the shipping.               |
+| `order_id`         | `INT` (Foreign Key: `orders.order_id`) | Reference to the associated order.                |
+| `shipping_date`    | `DATE`        | Date the order was shipped.                       |
+| `return_date`      | `DATE`        | Date the order was returned, if applicable.       |
+| `shipping_providers` | `VARCHAR(15)` | Name of the shipping provider.                   |
+| `delivery_status`  | `VARCHAR(15)` | Current delivery status of the order.             |
+
+---
+
+### 9. Inventory Table  
+This table tracks product inventory.
+
+| **Column Name**   | **Data Type** | **Description**                                   |
+|--------------------|---------------|---------------------------------------------------|
+| `inventory_id`     | `INT` (Primary Key) | Unique identifier for the inventory record.       |
+| `product_id`       | `INT` (Foreign Key: `products.product_id`) | Reference to the associated product.             |
+| `stock`            | `INT`        | Number of units in stock.                         |
+| `warehouse_id`     | `INT`        | Identifier for the warehouse storing the product. |
+| `last_stock_date`  | `DATE`       | Date the stock was last updated.                  |
+
+---
+
+## Relationships
+
+### Category Table:
+- `category_id` is a primary key.
+
+### Products Table:
+- `category_id` is a foreign key referencing the **Category Table** (`category_id`).
+
+### Customers Table:
+- `customer_id` is a primary key.
+
+### Orders Table:
+- `customer_id` is a foreign key referencing the **Customers Table** (`customer_id`).
+- `seller_id` is a foreign key referencing the **Sellers Table** (`seller_id`).
+
+### Sellers Table:
+- `seller_id` is a primary key.
+
+### Order Items Table:
+- `order_id` is a foreign key referencing the **Orders Table** (`order_id`).
+- `product_id` is a foreign key referencing the **Products Table** (`product_id`).
+
+### Payments Table:
+- `order_id` is a foreign key referencing the **Orders Table** (`order_id`).
+
+### Shippings Table:
+- `order_id` is a foreign key referencing the **Orders Table** (`order_id`).
+
+### Inventory Table:
+- `product_id` is a foreign key referencing the **Products Table** (`product_id`).
+
+---
+
+### End of Documentation
+
