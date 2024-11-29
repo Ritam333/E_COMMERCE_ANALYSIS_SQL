@@ -4,7 +4,7 @@
 This project provides SQL queries and stored procedures to address different business requirements for an e-commerce system. 
 It covers various reports such as top-selling products, revenue analysis, customer lifetime value, Inventory Stock Alerts,Shipping Delays..ETC.
 
---
+---
 
 ## 🗂️ **Project Structure**  
 
@@ -52,7 +52,7 @@ The ERD visually represents the relationships between tables in the database.
 
 
 
---
+---
 
 ## 📚 Learning Outcomes  
 
