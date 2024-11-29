@@ -27,7 +27,7 @@ It covers various reports such as top-selling products, revenue analysis, custom
 
 The ERD visually represents the relationships between tables in the database.  
 
- [Click here to view the ERD](https://github.com/Ritam333/ZOMATO_DATA_ANALYSIS_SQL/blob/main/ERD.png)  
+ [Click here to view the ERD](https://github.com/Ritam333/E_COMMERCE_ANALYSIS_SQL/blob/main/ERD.png)  
 
 ---
 
